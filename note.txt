@@ -1,0 +1,20 @@
+Component hierarchy:
+<Layout>
+  <Template>
+    <ErrorBoundary fallback={<Error />}>
+      <Suspense fallback={<Loading />}
+        <ErrorBoundary fallback={<NotFound />}>
+          <Page />
+        </ErrorBoundary>
+      </Suspense>
+    </ErrorBoundary>
+  </Template>
+</Layout>
+
+Filename:
+- layout.js/layout.tsx
+- template.js/template.tsx
+- error.js/error.tsx
+- loading.js/loading.tsx
+- not-found.js/not-found.tsx
+- page.js/page.tsx
