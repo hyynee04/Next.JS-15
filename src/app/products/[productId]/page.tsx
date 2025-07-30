@@ -2,24 +2,24 @@ import { Metadata } from "next";
 import { resolve } from "path";
 
 type Props = {
-    params: Promise<{ productId: string }>
+  params: Promise<{ productId: string }>
 }
 
 export const generateMetadata = async ({ params }: Props): Promise<Metadata> => {
-    const id = (await params).productId;
-    const title = await new Promise((resolve) => {
-        setTimeout(() => {
-            resolve(`iPhone ${id}`)
-        }, 100)
-    })
-    return {
-        title: `Product ${title}`
-    }
+  const id = (await params).productId;
+  const title = await new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(`iPhone ${id}`)
+    }, 100)
+  })
+  return {
+    title: `Product ${title}`
+  }
 }
 
 const ProductDetails = async ({ params }: Props) => {
-    const productId = (await params).productId;
-    return <h1>Details about product {productId}</h1>
+  const productId = (await params).productId;
+  return <h1>Details about product {productId}</h1>
 }
 
 export default ProductDetails;

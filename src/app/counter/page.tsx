@@ -1,11 +1,11 @@
 import Counter from "./counter";
 
 export const metadata = {
-    title: "Counter",
+  title: "Counter",
 }
 
 const CounterPage = () => {
-    return <Counter />
+  return <Counter />
 }
 
 export default CounterPage;
