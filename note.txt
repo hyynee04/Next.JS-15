@@ -18,3 +18,9 @@ Filename:
 - loading.js/loading.tsx
 - not-found.js/not-found.tsx
 - page.js/page.tsx
+
+Intercepting routes conventions:
+- (.) to match segments on the same level
+- (..) to match segments one level above
+- (..)(..) to match segments two levels above
+- (...) to match segments from the root app directory
